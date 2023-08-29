@@ -32,4 +32,11 @@ d3.text(
 )
   .then(d3.tsvParseRows)
   .then(tabulate)
-  .then(() => $("#example").DataTable());
+  .then(() =>
+    $("#example").DataTable({
+      language: {
+        infoPostFix:
+          '<br><a href="https://github.com/sunmoonStern/funin-open-data-website2">GitHub</a>'
+      }
+    })
+  );
